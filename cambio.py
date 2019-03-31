@@ -19,8 +19,10 @@ if response.status_code == 200:
 	print('Euro: %.2f' % euro_real)
 	print('Dollar: %.2f' % dollar_real)
 	print('Bitcoin: %.2f' % btc_real)
+	print('Gerando o Arquivo CSV...')
 	df = pd.DataFrame({'Moedas': ['Euro', 'Dollar', 'Real'], 'Valores':[euro_real, dollar_real, btc_real]})
 	df.to_csv('valores.csv', index=False, sep=';')
+	print('Arquivo Criado e Exportado com Sucesso para a Pasta do Projeto (=')
 
 else:
 	print('Erro no Site!')
